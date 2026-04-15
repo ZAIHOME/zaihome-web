@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>購物須知 — ZAIHOME</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1410;
+    --warm-dark: #2e2218;
+    --mid: #6b5a4e;
+    --light: #9e8a7a;
+    --pale: #ddd4c8;
+    --cream: #f0e8de;
+    --bg: #e8ddd3;
+    --accent: #8a6040;
+    --gold: #a87840;
+    --divider: rgba(120,85,55,0.22);
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+background: var(–bg);
+font-family: ‘Noto Serif TC’, serif;
+color: var(–ink);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding: 48px 20px;
+}
+
+.page {
+width: 100%;
+max-width: 720px;
+background: #faf6f1;
+box-shadow: 0 4px 48px rgba(60,40,20,0.14), 0 1px 8px rgba(60,40,20,0.08);
+position: relative;
+overflow: hidden;
+}
+
+/* decorative border lines */
+.page::before {
+content: ‘’;
+position: absolute;
+top: 10px; left: 10px; right: 10px; bottom: 10px;
+border: 1px solid var(–divider);
+pointer-events: none;
+z-index: 1;
+}
+
+/* top decorative band */
+.top-band {
+background: var(–warm-dark);
+height: 5px;
+width: 100%;
+}
+
+.inner {
+padding: 48px 56px 52px;
+position: relative;
+}
+
+/* ── Header ── */
+.header {
+text-align: center;
+margin-bottom: 40px;
+padding-bottom: 32px;
+border-bottom: 1px solid var(–divider);
+}
+
+.brand {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 11px;
+font-weight: 300;
+letter-spacing: 0.45em;
+color: var(–light);
+text-transform: uppercase;
+margin-bottom: 14px;
+}
+
+.main-title {
+font-size: 32px;
+font-weight: 500;
+letter-spacing: 0.35em;
+color: #1c1410;
+line-height: 1;
+margin-bottom: 8px;
+}
+
+.sub-title {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 12px;
+font-weight: 300;
+letter-spacing: 0.4em;
+color: var(–light);
+text-transform: uppercase;
+}
+
+/* ── Section ── */
+.section {
+margin-bottom: 36px;
+}
+
+.section-header {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 18px;
+}
+
+.section-icon {
+width: 28px;
+height: 28px;
+background: var(–warm-dark);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+}
+
+.section-icon svg {
+width: 13px;
+height: 13px;
+fill: white;
+}
+
+.section-titles {
+flex: 1;
+}
+
+.section-zh {
+font-size: 16px;
+font-weight: 500;
+letter-spacing: 0.25em;
+color: #1c1410;
+line-height: 1;
+margin-bottom: 3px;
+}
+
+.section-en {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 10px;
+letter-spacing: 0.35em;
+color: var(–light);
+text-transform: uppercase;
+}
+
+.section-line {
+flex: 1;
+height: 1px;
+background: var(–divider);
+}
+
+/* ── Items ── */
+.items {
+display: flex;
+flex-direction: column;
+gap: 0;
+padding-left: 4px;
+}
+
+.item {
+display: flex;
+gap: 14px;
+align-items: flex-start;
+padding: 10px 0;
+border-bottom: 1px dotted rgba(139,111,94,0.15);
+}
+
+.item:last-child {
+border-bottom: none;
+}
+
+.bullet {
+width: 5px;
+height: 5px;
+background: var(–gold);
+border-radius: 50%;
+flex-shrink: 0;
+margin-top: 8px;
+}
+
+.item-text {
+font-size: 13.5px;
+font-weight: 300;
+color: #3a2c22;
+line-height: 1.85;
+letter-spacing: 0.08em;
+}
+
+.item-text strong {
+font-weight: 500;
+color: #1c1410;
+}
+
+.item-text em {
+font-style: normal;
+color: var(–accent);
+font-weight: 500;
+}
+
+/* ── Notice box ── */
+.notice-box {
+background: #f0e8de;
+border-left: 3px solid var(–gold);
+padding: 14px 18px;
+margin-top: 8px;
+border-radius: 0 4px 4px 0;
+}
+
+.notice-box .item-text {
+font-size: 12.5px;
+}
+
+/* ── Divider ornament ── */
+.ornament {
+text-align: center;
+margin: 32px 0;
+display: flex;
+align-items: center;
+gap: 16px;
+}
+
+.ornament-line {
+flex: 1;
+height: 1px;
+background: linear-gradient(to right, transparent, var(–divider));
+}
+
+.ornament-line.r {
+background: linear-gradient(to left, transparent, var(–divider));
+}
+
+.ornament-diamond {
+width: 6px;
+height: 6px;
+background: var(–gold);
+transform: rotate(45deg);
+}
+
+/* ── Footer ── */
+.footer {
+margin-top: 36px;
+padding-top: 24px;
+border-top: 1px solid var(–divider);
+text-align: center;
+}
+
+.footer-note {
+font-size: 11.5px;
+font-weight: 300;
+color: var(–mid);
+letter-spacing: 0.12em;
+line-height: 1.9;
+margin-bottom: 16px;
+}
+
+.footer-brand {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 13px;
+font-weight: 300;
+letter-spacing: 0.55em;
+color: var(–light);
+text-transform: uppercase;
+}
+
+/* ── Tag highlights ── */
+.tag {
+display: inline-block;
+background: #ede5da;
+color: var(–accent);
+font-size: 11px;
+font-weight: 500;
+letter-spacing: 0.15em;
+padding: 2px 8px;
+border-radius: 2px;
+margin: 2px 2px 0 0;
+vertical-align: middle;
+}
+
+@media (max-width: 520px) {
+.inner { padding: 32px 28px 40px; }
+.main-title { font-size: 24px; }
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+  <div class="top-band"></div>
+  <div class="inner">
+
+```
+<!-- Header -->
+<div class="header">
+  <div class="brand">ZAIHOME</div>
+  <h1 class="main-title">購 物 須 知</h1>
+  <div class="sub-title">Shopping Guide &amp; Policy</div>
+</div>
+
+<!-- 1. 尺寸說明 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-1.38 0-2.5-1.12-2.5-2.5S14.12 10 15.5 10s2.5 1.12 2.5 2.5S16.88 15 15.5 15zm3.5-1h-1v-3h1v3z"/></svg>
+    </div>
+    <div class="section-titles">
+      <div class="section-zh">尺 寸 說 明</div>
+      <div class="section-en">Sizing Guide</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="items">
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">下單前請<strong>仔細確認尺寸</strong>是否符合需求，商品頁面均有標示詳細尺寸資訊</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">因<em>尺寸問題</em>恕不提供退換貨，請務必於購買前確認清楚</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">手工製作商品因工藝特性，實際尺寸允許 <strong>±1–2 cm</strong> 誤差，屬正常情況</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">不確定尺寸者，歡迎<em>先私訊詢問</em>，我們將協助您確認最適合的尺寸</div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. 商品說明 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+    </div>
+    <div class="section-titles">
+      <div class="section-zh">商 品 說 明</div>
+      <div class="section-en">Product Details</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="items">
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">所有商品均為<strong>實拍呈現</strong>，採自然光拍攝，力求真實還原商品色澤</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">因拍攝光線、角度及<em>不同顯示設備差異</em>，實際色彩與細節可能略有不同，屬正常情況</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">每件商品皆為<strong>純手工製作</strong>，暈染、紋理與細節各有些微不同，正是手作獨特之美</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">商品無法與圖片<strong>100% 完全一致</strong>，此為手作工藝特性，完美主義者請審慎考量後再下單</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">如有任何商品細節疑問，歡迎下單前<em>先行私訊確認</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. 客製商品 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+    </div>
+    <div class="section-titles">
+      <div class="section-zh">客 製 商 品</div>
+      <div class="section-en">Custom Orders</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="items">
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">客製化商品為<strong>專屬訂製</strong>，一旦確認製作後<em>恕不提供退換貨</em></div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">下單前請與我們充分溝通細節（尺寸、顏色、款式），確認無誤後再進行付款</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">客製商品<strong>製作時間較長</strong>，詳細工期請於下單前洽詢確認</div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. 退換貨政策 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path d="M19 8l-4 4h3c0 3.31-2.69 6-6 6a5.87 5.87 0 0 1-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4C7.58 4 4 7.58 4 12H1l4 4 4-4H6z"/></svg>
+    </div>
+    <div class="section-titles">
+      <div class="section-zh">退 換 貨 政 策</div>
+      <div class="section-en">Return &amp; Exchange Policy</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="items">
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">依消保法規定，實體商品享有<strong>7 天鑑賞期</strong>（非使用期），請於收到商品後確認</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">以下情況<em>不列入退換範圍</em>：<br>
+        <span class="tag">色差</span><span class="tag">個人喜好</span><span class="tag">尺寸問題</span><span class="tag">客製品</span><span class="tag">使用後損壞</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">退換商品須保持<strong>全新未使用狀態</strong>，附原包裝及配件，方可受理</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">若商品有<strong>寄錯或明顯瑕疵</strong>，請於收貨後 <em>48 小時內</em>拍照存證並聯繫我們，逾時恕難受理</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">退換貨運費依情況分擔：<strong>賣家責任</strong>由本店負擔運費；<strong>買家因素</strong>則由買家自行負擔</div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. 出貨配送 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+    </div>
+    <div class="section-titles">
+      <div class="section-zh">出 貨 說 明</div>
+      <div class="section-en">Processing &amp; Shipping</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="items">
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text"><strong>現貨商品</strong>付款後 <em>1–2 個工作天</em>出貨</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text"><strong>六日公休</strong>，週六日不製作、不出貨，但<em>訊息照常回覆</em>，請安心聯繫</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">出貨後將提供<em>物流單號</em>，請自行至物流官網查詢配送進度</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">若因<strong>地址填寫錯誤</strong>或無人收件導致退件，重新寄送之運費由買家自行負擔</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">目前僅支援<em>台灣本島</em>配送，離島地區運費及時間請於下單前洽詢</div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. 訂製服務 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c5.33 0 8 2.67 8 4v2H4v-2c0-1.33 2.67-4 8-4z"/></svg>
+    </div>
+    <div class="section-titles">
+      <div class="section-zh">訂 製 服 務</div>
+      <div class="section-en">Custom Service</div>
+    </div>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="items">
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">本店提供<strong>專屬訂製服務</strong>，可依您的需求量身打造專屬商品</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">訂製項目包含：<em>尺寸客製、顏色調配、圖案設計</em>等，詳情歡迎私訊洽詢</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">訂製商品需先<strong>確認設計稿及報價</strong>，雙方確認後方進行製作與付款</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">訂製商品因屬<em>專屬製作</em>，確認後恕不接受取消訂單或退換貨</div>
+    </div>
+    <div class="item">
+      <div class="bullet"></div>
+      <div class="item-text">製作工期視訂製內容而定，下單前請與我們<strong>充分討論時程需求</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. 聯繫我們 -->
+<div class="notice-box">
+  <div class="items">
+    <div class="item" style="border:none; padding: 4px 0;">
+      <div class="bullet" style="margin-top:6px"></div>
+      <div class="item-text">有任何問題，歡迎<strong>先行私訊</strong>，我們將盡快回覆協助處理，謝謝您的支持與耐心 🙏</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p class="footer-note">
+    本購物須知最終解釋權歸 ZAIHOME 所有<br>
+    如有任何疑問，歡迎隨時與我們聯繫
+  </p>
+  <div class="footer-brand">Z A I H O M E</div>
+</div>
+```
+
+  </div><!-- /.inner -->
+</div><!-- /.page -->
+</body>
+</html>
