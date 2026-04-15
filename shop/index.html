@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>ZAIHOME IG Story - 訂製說明</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    background: #EDE6DC !important;
+    color: #3A2E26 !important;
+    color-scheme: light !important;
+    font-family: 'Noto Serif TC', Georgia, serif;
+    font-weight: 300;
+  }
+  @media (prefers-color-scheme: dark) {
+    html, body, div, p, h1, h2, h3, h4, span, ul, li { background-color: unset; color: unset; }
+  }
+
+.page {
+width: 100%;
+max-width: 540px;
+margin: 0 auto;
+min-height: 100vh;
+background: #EDE6DC !important;
+display: flex; flex-direction: column;
+position: relative; overflow: hidden;
+}
+
+/* 背景裝飾 */
+.page::before {
+content: ‘’;
+position: absolute; inset: 0; z-index: 0;
+background:
+radial-gradient(ellipse at 15% 85%, rgba(180,155,128,0.2) 0%, transparent 50%),
+radial-gradient(ellipse at 85% 15%, rgba(210,195,170,0.18) 0%, transparent 45%);
+pointer-events: none;
+}
+
+.inner { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+/* HEADER */
+.header {
+background: #3A2E26 !important;
+padding: 3rem 2rem 2.5rem;
+text-align: center;
+}
+.header .brand { font-family: Georgia, serif; font-size: 0.58rem; letter-spacing: 0.55em; color: rgba(255,255,255,0.38) !important; text-transform: uppercase; margin-bottom: 1.2rem; }
+.header h1 { font-family: Georgia, serif; font-size: 2.2rem; font-weight: 300; color: #FFFFFF !important; line-height: 1.2; }
+.header h1 em { font-style: italic; color: #C8B89A !important; }
+.header .sub { font-size: 0.72rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.42) !important; margin-top: 0.9rem; }
+
+/* 裝飾分隔 */
+.sep-fancy {
+display: flex; align-items: center; gap: 0.8rem;
+padding: 0 2rem; margin: 1.6rem 0;
+}
+.sep-fancy .line { flex: 1; height: 1px; background: #C0B0A0; }
+.sep-fancy .dot { width: 5px; height: 5px; border-radius: 50%; background: #A89878; }
+
+/* SECTION */
+.sec { padding: 1.6rem 2rem; }
+.sec-label { font-size: 0.55rem; letter-spacing: 0.45em; text-transform: uppercase; color: #A89878 !important; margin-bottom: 0.5rem; }
+.sec-title { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 400; color: #3A2E26 !important; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+.divider { width: 28px; height: 1px; background: #C0B0A0; margin: 0.6rem 0 1.1rem; }
+
+/* LINE ID BOX */
+.line-box {
+margin: 0 2rem 1.6rem;
+padding: 0.8rem 1.2rem;
+background: #FFFFFF !important;
+border: 1px solid #D0C4B4;
+display: flex; align-items: center; gap: 0.7rem; justify-content: center;
+}
+.ld { width: 7px; height: 7px; border-radius: 50%; background: #06C755 !important; flex-shrink: 0; }
+.lt { font-size: 0.72rem; letter-spacing: 0.1em; color: #8A7A6A !important; }
+.li { font-size: 0.75rem; font-weight: 500; color: #3A2E26 !important; letter-spacing: 0.08em; }
+
+/* STEPS */
+.steps { padding: 0 2rem; }
+.step { display: flex; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid rgba(160,140,120,0.2); }
+.step:last-child { border-bottom: none; }
+.step-n { font-family: Georgia, serif; font-size: 1.8rem; font-style: italic; color: #D0C0B0 !important; width: 38px; flex-shrink: 0; line-height: 1; }
+.step-r h3 { font-size: 0.88rem; font-weight: 500; color: #3A2E26 !important; margin-bottom: 0.3rem; letter-spacing: 0.04em; }
+.step-r p { font-size: 0.77rem; line-height: 1.85; color: #6A5A4A !important; }
+.step-badge { display: inline-block; margin-top: 0.4rem; font-size: 0.65rem; color: #8A7860 !important; background: rgba(168,152,120,0.15) !important; padding: 0.18rem 0.6rem; letter-spacing: 0.07em; border: 1px solid rgba(168,152,120,0.3); }
+.step-tip { display: block; margin-top: 0.4rem; font-size: 0.72rem; color: #7a6010 !important; background: rgba(212,176,96,0.1) !important; padding: 0.38rem 0.65rem; border-left: 2px solid #C8A850; line-height: 1.7; }
+
+/* NOTICE CARDS */
+.cards { margin: 0 2rem; display: flex; flex-direction: column; gap: 1px; background: rgba(160,140,120,0.2); }
+.card { padding: 1.1rem 1.3rem; background: #F5EFE6 !important; }
+.card.bg2 { background: #FFFFFF !important; }
+.card.bg-warn { background: #FBF7EE !important; }
+.card h4 { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #A89878 !important; margin-bottom: 0.65rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(168,152,120,0.25); }
+.card.bg-warn h4 { color: #8A6820 !important; }
+.card ul { list-style: none; }
+.card ul li { font-size: 0.78rem; line-height: 1.95; color: #5A4A3A !important; padding-left: 0.9rem; position: relative; }
+.card ul li::before { content: ‘—’; position: absolute; left: 0; color: #C0B0A0; }
+.card .tip { margin-top: 0.65rem; font-size: 0.72rem; padding: 0.45rem 0.8rem; background: rgba(200,168,80,0.1) !important; color: #7a6010 !important; line-height: 1.75; border-left: 2px solid #C8A850; }
+
+/* FOOTER */
+.footer { background: #3A2E26 !important; padding: 1.5rem 2rem; text-align: center; margin-top: auto; }
+.footer .fb { font-family: Georgia, serif; font-size: 0.85rem; letter-spacing: 0.4em; color: rgba(255,255,255,0.55) !important; margin-bottom: 0.4rem; }
+.footer .fp { font-size: 0.6rem; letter-spacing: 0.14em; color: rgba(255,255,255,0.28) !important; line-height: 2; }
+</style>
+
+</head>
+<body>
+<div class="page">
+<div class="inner">
+
+  <div class="header">
+    <div class="brand">ZAIHOME · Wearable Nail</div>
+    <h1>穿戴甲<br><em>帶圖訂製</em></h1>
+    <p class="sub">流程說明 · 訂製須知</p>
+  </div>
+
+  <div class="line-box">
+    <div class="ld"></div>
+    <span class="lt">LINE@&ensp;</span>
+    <span class="li">@754dmylx</span>
+  </div>
+
+  <div class="sep-fancy"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+
+  <div class="sec">
+    <div class="sec-label">How It Works</div>
+    <div class="sec-title">訂製流程</div>
+    <div class="divider"></div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">01</div>
+      <div class="step-r">
+        <h3>LINE@ 傳圖詢價</h3>
+        <p>傳送款式圖、甲型及 10 指尺碼。</p>
+        <span class="step-tip">ID：@754dmylx</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">02</div>
+      <div class="step-r">
+        <h3>客服溝通確認報價</h3>
+        <p>溝通款式細節，確認後提供報價。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">03</div>
+      <div class="step-r">
+        <h3>蝦皮下單</h3>
+        <p>依報價至蝦皮下單，備注設計需求。</p>
+        <div class="step-badge">約 3–10 日完成</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">04</div>
+      <div class="step-r">
+        <h3>拍照確認 ＋ 1 次調整</h3>
+        <p>完成後拍照給你確認，調整後出貨。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">05</div>
+      <div class="step-r">
+        <h3>完成出貨 💅</h3>
+        <p>確認無誤後出貨，提供物流單號。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep-fancy" style="margin: 1.4rem 0;"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+
+  <div class="sec" style="padding-bottom:0.8rem;">
+    <div class="sec-label">Order Notice</div>
+    <div class="sec-title">訂製須知</div>
+    <div class="divider"></div>
+  </div>
+
+  <div class="cards">
+    <div class="card bg-warn">
+      <h4>⚠ 尺寸（最重要）</h4>
+      <ul>
+        <li>尺寸需自行量測提供，填錯恕無法退換</li>
+        <li>請依教學量測「10 指甲面寬度」</li>
+        <li>不確定尺寸建議先買測量甲片</li>
+      </ul>
+      <div class="tip">👉 寧可稍大也不要過小</div>
+    </div>
+    <div class="card">
+      <h4>商品特性 · 退換貨</h4>
+      <ul>
+        <li>手工製作，與示意圖不會 100% 一致</li>
+        <li>客製化商品不適用 7 天鑑賞期</li>
+        <li>瑕疵 / 錯誤需 48 小時內提供開箱照</li>
+      </ul>
+    </div>
+    <div class="card bg2">
+      <h4>其他</h4>
+      <ul>
+        <li>製作時間約 3–10 天，不接急單</li>
+        <li>訂製後無法取消，下單即同意所有內容</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="height:1.8rem;"></div>
+
+  <div class="footer">
+    <div class="fb">ZAIHOME</div>
+    <p class="fp">LINE@ 傳圖 → 蝦皮下單 → 安心收貨</p>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
