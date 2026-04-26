@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>ZAIHOME｜換甲型注意事項</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    background: #F8F8F6 !important;
+    color: #1A1A18 !important;
+    color-scheme: light !important;
+    font-family: 'Noto Serif TC', 'Noto Serif', Georgia, serif;
+    font-weight: 300;
+  }
+  @media (prefers-color-scheme: dark) {
+    html, body, div, p, h1, h2, h3, h4, span, ul, li {
+      background-color: unset; color: unset;
+    }
+  }
+
+.wrap {
+max-width: 600px;
+margin: 0 auto;
+background: #F8F8F6 !important;
+}
+
+/* HEADER */
+.header {
+background: #1A1A18 !important;
+padding: 2.2rem 2rem 2rem;
+text-align: center;
+}
+.header .brand {
+font-family: Georgia, serif;
+font-size: 0.65rem; letter-spacing: 0.5em;
+color: rgba(255,255,255,0.45) !important;
+text-transform: uppercase; margin-bottom: 1rem;
+}
+.header h1 {
+font-family: Georgia, serif;
+font-size: 1.7rem; font-weight: 300; letter-spacing: 0.05em;
+color: #FFFFFF !important; line-height: 1.3; margin-bottom: 0.3rem;
+}
+.header h1 em { font-style: italic; color: #BEBEBA !important; }
+.header .sub {
+font-size: 0.75rem; letter-spacing: 0.15em;
+color: rgba(255,255,255,0.4) !important; margin-top: 0.8rem;
+}
+
+/* NOTICE TOP */
+.top-notice {
+background: #FBF8F0 !important;
+border-left: 3px solid #D4B060;
+padding: 0.9rem 1.4rem;
+font-size: 0.8rem; line-height: 1.9;
+color: #7a6010 !important;
+letter-spacing: 0.04em;
+}
+
+/* SECTION */
+.sec { padding: 1.8rem 2rem; background: #FFFFFF !important; border-bottom: 1px solid #EEEEEC; }
+.sec-alt { padding: 1.8rem 2rem; background: #F8F8F6 !important; border-bottom: 1px solid #EEEEEC; }
+.sec-label {
+font-size: 0.58rem; letter-spacing: 0.4em; text-transform: uppercase;
+color: #888884 !important; margin-bottom: 0.5rem;
+}
+.sec-title {
+font-family: Georgia, serif;
+font-size: 1rem; font-weight: 500; letter-spacing: 0.08em;
+color: #1A1A18 !important; margin-bottom: 0.3rem;
+}
+.divider { width: 28px; height: 1px; background: #BEBEBA; margin: 0.7rem 0 1.1rem; }
+
+/* NAIL TYPES GRID */
+.types-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1px;
+background: #E0E0DE;
+margin-top: 0.5rem;
+}
+.type-card {
+background: #FFFFFF !important;
+padding: 1rem 1.2rem;
+display: flex; align-items: center; gap: 0.9rem;
+}
+.type-card:nth-child(even) { background: #F8F8F6 !important; }
+.type-icon {
+font-size: 1.4rem; flex-shrink: 0;
+}
+.type-name {
+font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em;
+color: #1A1A18 !important; line-height: 1.3;
+}
+.type-size {
+font-size: 0.72rem; color: #888884 !important;
+letter-spacing: 0.06em; margin-top: 0.2rem;
+}
+
+/* STEPS */
+.steps { margin-top: 0.5rem; }
+.step {
+display: flex; gap: 1.1rem; padding: 0.9rem 0;
+border-bottom: 1px solid #EEEEEC; align-items: flex-start;
+}
+.step:last-child { border-bottom: none; }
+.step-n {
+font-family: Georgia, serif; font-size: 1.5rem; font-style: italic;
+color: #BEBEBA !important; width: 36px; flex-shrink: 0;
+text-align: center; line-height: 1;
+}
+.step-r h3 { font-size: 0.87rem; font-weight: 500; color: #1A1A18 !important; margin-bottom: 0.3rem; letter-spacing: 0.05em; }
+.step-r p { font-size: 0.79rem; line-height: 1.85; color: #444440 !important; }
+
+/* NOTICE CARDS */
+.cards { display: flex; flex-direction: column; gap: 1px; background: #E0E0DE; margin-top: 0.5rem; }
+.card { padding: 1.2rem 1.4rem; background: #FFFFFF !important; }
+.card.bg2 { background: #F8F8F6 !important; }
+.card.bg-warn { background: #FBF8F0 !important; }
+.card h4 { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #888884 !important; margin-bottom: 0.7rem; padding-bottom: 0.55rem; border-bottom: 1px solid #EEEEEC; }
+.card.bg-warn h4 { color: #7a6010 !important; border-bottom-color: rgba(212,176,96,0.3); }
+.card ul { list-style: none; }
+.card ul li { font-size: 0.82rem; line-height: 2; color: #444440 !important; padding-left: 1rem; position: relative; }
+.card ul li::before { content: ‘—’; position: absolute; left: 0; color: #BEBEBA; }
+.card .tip { margin-top: 0.7rem; font-size: 0.75rem; padding: 0.5rem 0.85rem; background: rgba(212,176,96,0.1) !important; color: #7a6010 !important; line-height: 1.8; border-left: 2px solid #D4B060; }
+
+/* PRICE NOTE */
+.price-note {
+background: #1A1A18 !important;
+padding: 1.2rem 1.6rem;
+display: flex; align-items: center; gap: 1rem;
+}
+.price-note .pn-icon { font-size: 1.3rem; flex-shrink: 0; }
+.price-note .pn-text { font-size: 0.8rem; line-height: 1.9; color: rgba(255,255,255,0.75) !important; letter-spacing: 0.04em; }
+.price-note .pn-text strong { color: #FFFFFF !important; font-weight: 500; }
+
+/* FOOTER */
+.footer {
+background: #1A1A18 !important;
+padding: 1.4rem 2rem;
+display: flex; justify-content: space-between; align-items: center;
+border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer .fb { font-family: Georgia, serif; font-size: 0.95rem; letter-spacing: 0.28em; color: rgba(255,255,255,0.6) !important; }
+.footer .fr { font-size: 0.65rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.3) !important; text-align: right; line-height: 1.9; }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+
+  <div class="header">
+    <div class="brand">ZAIHOME · Wearable Nail</div>
+    <h1>換甲型<br><em>注意事項</em></h1>
+    <p class="sub">更換甲型屬訂製服務，下單前請詳閱</p>
+  </div>
+
+  <!-- TOP NOTICE -->
+
+  <div class="top-notice">
+    ⚠️&ensp;換甲型為客製化服務，<strong>請先詢問確認可更換後</strong>，再至更換甲型賣場下單對應金額
+  </div>
+
+  <!-- 可選甲型 -->
+
+  <div class="sec">
+    <div class="sec-label">Available Types</div>
+    <div class="sec-title">可更換甲型一覽</div>
+    <div class="divider"></div>
+    <div class="types-grid">
+      <div class="type-card">
+        <div class="type-icon">💅</div>
+        <div>
+          <div class="type-name">新中方</div>
+          <div class="type-size">19 mm</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">💅</div>
+        <div>
+          <div class="type-name">新短方</div>
+          <div class="type-size">17 mm</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">💅</div>
+        <div>
+          <div class="type-name">中橢圓</div>
+          <div class="type-size">19 mm</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">💅</div>
+        <div>
+          <div class="type-name">短梯</div>
+          <div class="type-size">17 mm</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">💅</div>
+        <div>
+          <div class="type-name">短短梯</div>
+          <div class="type-size">15–16 mm</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">💅</div>
+        <div>
+          <div class="type-name">短方圓</div>
+          <div class="type-size">15 mm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 訂購流程 -->
+
+  <div class="sec-alt">
+    <div class="sec-label">How To Order</div>
+    <div class="sec-title">換甲型訂購流程</div>
+    <div class="divider"></div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-r">
+          <h3>傳圖詢問</h3>
+          <p>告知欲購買的款式，並說明想更換的甲型，等待確認是否可更換。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-r">
+          <h3>確認可更換 ＋ 報價</h3>
+          <p>客服確認款式可更換後，告知是否需加價，確認金額無誤後再進行下單。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-r">
+          <h3>至更換甲型賣場下單</h3>
+          <p>前往更換甲型專屬賣場，依報價金額下單。</p>
+          <p style="margin-top:0.4rem;font-size:0.79rem;color:#7a6010 !important;background:rgba(212,176,96,0.08) !important;padding:0.45rem 0.7rem;border-left:2px solid #D4B060;">📝 備注欄請填寫：款式名稱、欲更換的甲型，以及任何希望調整的細節</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-r">
+          <h3>製作完成出貨</h3>
+          <p>依排單順序製作完成後直接出貨，並提供物流單號 💅</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 加價說明 -->
+
+  <div class="price-note">
+    <div class="pn-icon">💰</div>
+    <div class="pn-text">
+      <strong>關於加價</strong><br>
+      部分款式更換甲型需額外加價，視款式設計而定。<br>
+      請先詢問確認金額後再下單，以免造成糾紛。
+    </div>
+  </div>
+
+  <!-- 注意事項 -->
+
+  <div class="sec">
+    <div class="sec-label">Important Notice</div>
+    <div class="sec-title">換甲型注意事項</div>
+    <div class="divider"></div>
+    <div class="cards">
+      <div class="card bg-warn">
+        <h4>⚠ 下單前必讀</h4>
+        <ul>
+          <li>換甲型屬客製化服務，<strong>請務必先詢問確認可更換</strong>再下單</li>
+          <li>並非所有款式皆可更換甲型，依設計元素而定</li>
+          <li>部分款式更換甲型需額外加價，金額依款式不同</li>
+          <li>確認後請至「更換甲型賣場」下單，勿於原商品下單</li>
+        </ul>
+        <div class="tip">👉 未先詢問直接下單，若不可更換恕無法退款</div>
+      </div>
+      <div class="card bg2">
+        <h4>尺寸提醒</h4>
+        <ul>
+          <li>更換甲型同樣需提供 10 指甲面寬度</li>
+          <li>請依照教學正確量測，尺寸錯誤恕無法退換</li>
+          <li>若不確定尺寸，建議先購買測量甲片再訂製</li>
+        </ul>
+        <div class="tip">👉 寧可稍微大一點也不要過小</div>
+      </div>
+      <div class="card">
+        <h4>其他</h4>
+        <ul>
+          <li>換甲型同屬客製化商品，不適用 7 天鑑賞期</li>
+          <li>下單備注欄請詳細填寫希望調整的細節，製作依備注進行</li>
+          <li>若有品質瑕疵，請於收貨 48 小時內提供開箱照片</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+    <div class="fb">ZAIHOME</div>
+    <div class="fr">
+      <p>換甲型服務說明</p>
+      <p>詢問 → 確認 → 賣場下單</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
